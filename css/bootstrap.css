@@ -6254,4 +6254,19 @@ button.close {
   }
 }
 
+/* Starting State (Hidden) */
+.right-sidebar {
+    opacity: 0;
+    transform: translateX(50px); /* Starts 50px to the right */
+    transition: all 0.8s ease;   /* Smooth transition */
+    pointer-events: none;        /* Can't click it while hidden */
+}
+
+/* Active State (Triggered by jQuery) */
+.right-sidebar.show-sidebar {
+    opacity: 1;
+    transform: translateX(0);    /* Slides into place */
+    pointer-events: auto;        /* Becomes clickable */
+}
+
 /*# sourceMappingURL=bootstrap.css.map */
